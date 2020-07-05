@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages protected HomePage should render HomePage component 1`] = `
+<div
+  data-props={
+    Object {
+      "category": "general",
+      "title": "Deployments",
+    }
+  }
+  id="PageTitle"
+/>
+`;

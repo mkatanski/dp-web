@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views NavListView should render NavListView component 1`] = `
+.c0 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  overflow: auto;
+  padding: 0px 16px 16px 16px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div
+  className="c0"
+>
+  <nav
+    className="c1"
+  >
+    <div
+      data-prop={
+        Object {
+          "children": <List>
+            <NavItem
+              depth={1}
+              href="/deployments"
+              title="Deployments"
+            />
+          </List>,
+          "depth": 0,
+          "href": "",
+          "icon": [Function],
+          "isOpen": true,
+          "title": "General",
+        }
+      }
+      id="NavItem"
+    />
+  </nav>
+</div>
+`;

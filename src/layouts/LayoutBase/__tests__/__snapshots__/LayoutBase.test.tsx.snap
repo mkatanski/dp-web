@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layouts LayoutBase should render LayoutBase component w/o fallback 1`] = `
+<div
+  id="ReactRouter.Route"
+>
+  <div
+    id="ReactRouter.Switch"
+  >
+    children
+  </div>
+</div>
+`;
+
+exports[`layouts LayoutBase should render LayoutBase with default fallback component 1`] = `
+<div
+  id="ReactRouter.Route"
+>
+  <div
+    id="ReactRouter.Switch"
+  >
+    children
+    <div
+      id="ReactRouter.Route"
+    >
+      <div
+        id="NotFoundPage"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`layouts LayoutBase should render LayoutBase with given fallback component 1`] = `
+<div
+  id="ReactRouter.Route"
+>
+  <div
+    id="ReactRouter.Switch"
+  >
+    children
+    <div
+      id="ReactRouter.Route"
+    >
+      <div>
+        Fallback
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`layouts LayoutBase should render a spinner as a fallback 1`] = `
+<div
+  id="ReactRouter.Route"
+>
+  <div
+    id="LoadingScreen"
+  />
+</div>
+`;

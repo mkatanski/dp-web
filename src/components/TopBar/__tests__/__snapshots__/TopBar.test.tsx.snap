@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components TopBar should render TopBar component with children 1`] = `
+<div
+  data-props={
+    Object {
+      "className": "sc-AxjAm hWpfU",
+    }
+  }
+  id="MUI.AppBar"
+>
+  <div
+    data-props={
+      Object {
+        "className": "sc-AxirZ iYKkTj",
+      }
+    }
+    id="MUI.Toolbar"
+  >
+    children
+  </div>
+</div>
+`;
+
+exports[`components TopBar should render TopBar component with tablet size 1`] = `
+<div
+  data-props={
+    Object {
+      "className": "sc-AxjAm hWpfU",
+    }
+  }
+  id="MUI.AppBar"
+>
+  <div
+    data-props={
+      Object {
+        "className": "sc-AxirZ iYKkTj",
+      }
+    }
+    id="MUI.Toolbar"
+  >
+    <span
+      className="menuButton"
+      color="inherit"
+      id="MUI.IconButton"
+      onClick={[Function]}
+    >
+      <span
+        data-props={Object {}}
+        id="MUI.Icon.MenuOutlined"
+      />
+    </span>
+    children
+  </div>
+</div>
+`;

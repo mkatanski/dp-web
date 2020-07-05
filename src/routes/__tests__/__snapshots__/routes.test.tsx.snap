@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes should render routes schema 1`] = `
+<div
+  id="ReactRouter.Switch"
+>
+  <div
+    id="DefaultLayout"
+    path="/*"
+  >
+    <div
+      exact={true}
+      id="ReactRouter.Route"
+      path="/"
+    >
+      <div
+        id="ReactRouter.Redirect"
+        to="/deployments"
+      />
+    </div>
+    <div
+      exact={true}
+      id="ReactRouter.Route"
+      path={
+        Array [
+          "/deployments",
+        ]
+      }
+    >
+      <div
+        id="HomePage"
+      />
+    </div>
+    <div
+      id="ReactRouter.Route"
+    >
+      <div
+        id="NotFoundPage"
+      />
+    </div>
+  </div>
+  <div
+    id="ReactRouter.Route"
+  >
+    <div
+      id="NotFoundPage"
+    />
+  </div>
+</div>
+`;

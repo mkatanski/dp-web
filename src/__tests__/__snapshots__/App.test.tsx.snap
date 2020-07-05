@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render App component 1`] = `
+<div
+  className="App"
+>
+  <div
+    id="MUI.ThemeProvider"
+  >
+    <div
+      id="BrowserRouter"
+    >
+      <div>
+        Routes
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should render a loading screen as a fallback 1`] = `
+.c0 {
+  min-height: 100vh;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="App"
+>
+  <div
+    id="MUI.ThemeProvider"
+  >
+    <div
+      id="BrowserRouter"
+    >
+      <div
+        className="c0"
+      >
+        <div
+          id="LoadingScreen"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

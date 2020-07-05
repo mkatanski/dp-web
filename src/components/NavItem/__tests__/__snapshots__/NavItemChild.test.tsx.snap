@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/NavItem NavItemChild should render NavItemChild component 1`] = `
+.c0 .itemLeaf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c0 .linkButtonLeaf {
+  color: #546e7a;
+  padding: 10px 8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-transform: none;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  width: 100%;
+  font-weight: 400;
+}
+
+.c0 .linkButtonLeaf.depth-0.title {
+  font-weight: 500;
+}
+
+.c0 .linkTitle {
+  margin-right: auto;
+}
+
+.c0 .icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.c0 .linkActive {
+  color: #5850EC;
+}
+
+.c0 .linkActive .linkTitle {
+  font-weight: 500;
+}
+
+.c0 .linkActive .icon {
+  color: #5850EC;
+}
+
+<span
+  className="c0"
+>
+  <li
+    className="itemLeaf"
+    data-props={
+      Object {
+        "disableGutters": true,
+      }
+    }
+    id="MUI.ListItem"
+  >
+    <button
+      className="linkButtonLeaf depth-1"
+      data-props={
+        Object {
+          "activeClassName": "linkActive",
+          "component": [Function],
+          "style": Object {
+            "paddingLeft": 40,
+          },
+          "to": "/products",
+        }
+      }
+      id="MUI.Button"
+    >
+      <span
+        data-props={
+          Object {
+            "className": "icon",
+            "fontSize": "default",
+          }
+        }
+        id="MUI.Icon.StorefrontOutlined"
+      />
+      <span
+        className="linkTitle"
+      >
+        Products
+      </span>
+    </button>
+  </li>
+</span>
+`;

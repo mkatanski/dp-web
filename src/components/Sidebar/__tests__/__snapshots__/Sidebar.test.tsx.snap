@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Sidebar should render Sidebar component 1`] = `
+<div
+  data-props={
+    Object {
+      "PaperProps": Object {
+        "component": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "baseHash": 400283751,
+            "componentId": "sc-AxjAm",
+            "isStatic": false,
+            "rules": Array [
+              "
+  width: 256px;
+  top: 65px;
+  height: calc(100% - 65px);
+  border: none;
+  border-radius: 0;
+",
+            ],
+            "staticRulesId": "",
+          },
+          "displayName": "Styled(Paper)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "shouldForwardProp": undefined,
+          "styledComponentId": "sc-AxjAm",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "anchor": "left",
+      "onClose": [Function],
+      "open": false,
+      "variant": "temporary",
+    }
+  }
+  id="MUI.Drawer"
+>
+  children
+</div>
+`;
+
+exports[`components Sidebar should render Sidebar component with large desktop size 1`] = `
+<div
+  data-props={
+    Object {
+      "PaperProps": Object {
+        "component": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "baseHash": 400283751,
+            "componentId": "sc-AxjAm",
+            "isStatic": false,
+            "rules": Array [
+              "
+  width: 256px;
+  top: 65px;
+  height: calc(100% - 65px);
+  border: none;
+  border-radius: 0;
+",
+            ],
+            "staticRulesId": "",
+          },
+          "displayName": "Styled(Paper)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "shouldForwardProp": undefined,
+          "styledComponentId": "sc-AxjAm",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "anchor": "left",
+      "open": true,
+      "variant": "persistent",
+    }
+  }
+  id="MUI.Drawer"
+>
+  children
+</div>
+`;
+
+exports[`components Sidebar should render Sidebar component with open drawer 1`] = `
+<div
+  data-props={
+    Object {
+      "PaperProps": Object {
+        "component": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "baseHash": 400283751,
+            "componentId": "sc-AxjAm",
+            "isStatic": false,
+            "rules": Array [
+              "
+  width: 256px;
+  top: 65px;
+  height: calc(100% - 65px);
+  border: none;
+  border-radius: 0;
+",
+            ],
+            "staticRulesId": "",
+          },
+          "displayName": "Styled(Paper)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "shouldForwardProp": undefined,
+          "styledComponentId": "sc-AxjAm",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "anchor": "left",
+      "onClose": [Function],
+      "open": true,
+      "variant": "temporary",
+    }
+  }
+  id="MUI.Drawer"
+/>
+`;

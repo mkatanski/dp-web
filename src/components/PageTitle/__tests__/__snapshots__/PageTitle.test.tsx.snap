@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components PageTitle should render PageTitle component 1`] = `
+.c0 {
+  margin-bottom: 16px;
+}
+
+<div
+  className="c0"
+  data-props={
+    Object {
+      "alignItems": "flex-end",
+      "container": true,
+      "justify": "space-between",
+      "spacing": 2,
+    }
+  }
+  id="MUI.Grid"
+>
+  <div
+    data-props={
+      Object {
+        "item": true,
+      }
+    }
+    id="MUI.Grid"
+  >
+    <div
+      data-props={
+        Object {
+          "color": "textSecondary",
+          "component": "h2",
+          "variant": "overline",
+        }
+      }
+      id="MUI.Typography"
+    >
+      category
+    </div>
+    <div
+      data-props={
+        Object {
+          "color": "textPrimary",
+          "component": "h1",
+          "variant": "h3",
+        }
+      }
+      id="MUI.Typography"
+    >
+      title
+    </div>
+  </div>
+</div>
+`;

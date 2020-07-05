@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/NavItem NavItemParent should render NavItemParent as closed 1`] = `
+.c0 .item {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c0 .linkButton {
+  color: #546e7a;
+  padding: 10px 8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-transform: none;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  width: 100%;
+}
+
+.c0 .linkTitle {
+  margin-right: auto;
+}
+
+.c0 .icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+<span
+  className="c0"
+>
+  <li
+    className="item"
+    data-props={
+      Object {
+        "disableGutters": true,
+      }
+    }
+    id="MUI.ListItem"
+  >
+    <button
+      className="linkButton"
+      data-props={Object {}}
+      id="MUI.Button"
+      onClick={[Function]}
+    >
+      <span
+        className="linkTitle"
+      >
+        Marketing
+      </span>
+      <span
+        data-props={
+          Object {
+            "color": "inherit",
+            "fontSize": "default",
+          }
+        }
+        id="MUI.Icon.ExpandMoreOutlined"
+      />
+    </button>
+    <div
+      data-props={
+        Object {
+          "in": false,
+        }
+      }
+      id="MUI.Collapse"
+    >
+      children
+    </div>
+  </li>
+</span>
+`;
+
+exports[`components/NavItem NavItemParent should render NavItemParent as open with icon 1`] = `
+.c0 .item {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c0 .linkButton {
+  color: #546e7a;
+  padding: 10px 8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-transform: none;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  width: 100%;
+}
+
+.c0 .linkTitle {
+  margin-right: auto;
+}
+
+.c0 .icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+<span
+  className="c0"
+>
+  <li
+    className="item"
+    data-props={
+      Object {
+        "disableGutters": true,
+      }
+    }
+    id="MUI.ListItem"
+  >
+    <button
+      className="linkButton"
+      data-props={Object {}}
+      id="MUI.Button"
+      onClick={[Function]}
+    >
+      <span
+        data-props={
+          Object {
+            "className": "icon",
+            "fontSize": "default",
+          }
+        }
+        id="MUI.Icon.StorefrontOutlined"
+      />
+      <span
+        className="linkTitle"
+      >
+        Marketing
+      </span>
+      <span
+        data-props={
+          Object {
+            "color": "inherit",
+            "fontSize": "default",
+          }
+        }
+        id="MUI.Icon.ExpandLessOutlined"
+      />
+    </button>
+    <div
+      data-props={
+        Object {
+          "in": true,
+        }
+      }
+      id="MUI.Collapse"
+    >
+      children
+    </div>
+  </li>
+</span>
+`;

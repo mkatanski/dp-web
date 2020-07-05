@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components ToggleableDrawer should open drawer on button click 1`] = `
+<ToggleableDrawer
+  drawerAnchor="bottom"
+  renderButton={[Function]}
+>
+  <button
+    onClick={[Function]}
+  />
+  <Drawer
+    anchor="bottom"
+    data-testid="toggleable-drawer"
+    onClose={[Function]}
+    open={true}
+  >
+    <div
+      data-props={
+        Object {
+          "anchor": "bottom",
+          "data-testid": "toggleable-drawer",
+          "onClose": [Function],
+          "open": true,
+        }
+      }
+      id="MUI.Drawer"
+    >
+      child
+    </div>
+  </Drawer>
+</ToggleableDrawer>
+`;
+
+exports[`components ToggleableDrawer should open drawer via context 1`] = `
+<ToggleableDrawer
+  drawerAnchor="bottom"
+  renderButton={[Function]}
+>
+  <button
+    onClick={[Function]}
+  />
+  <Drawer
+    anchor="bottom"
+    data-testid="toggleable-drawer"
+    onClose={[Function]}
+    open={true}
+  >
+    <div
+      data-props={
+        Object {
+          "anchor": "bottom",
+          "data-testid": "toggleable-drawer",
+          "onClose": [Function],
+          "open": true,
+        }
+      }
+      id="MUI.Drawer"
+    >
+      <InternalComponent>
+        <p>
+          Internal Component
+        </p>
+      </InternalComponent>
+    </div>
+  </Drawer>
+</ToggleableDrawer>
+`;
+
+exports[`components ToggleableDrawer should render ToggleableDrawerView component with children 1`] = `
+Array [
+  <button />,
+  <div
+    data-props={
+      Object {
+        "anchor": undefined,
+        "data-testid": "toggleable-drawer",
+        "onClose": [Function],
+        "open": false,
+      }
+    }
+    id="MUI.Drawer"
+  >
+    child
+  </div>,
+]
+`;
