@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Provider as ReduxProvider } from "react-redux";
 
 import Routes from "routes";
 import { LoadingScreen } from "components/fallbacks/LoadingScreen";
@@ -10,6 +11,7 @@ import { ThemeProvider as MaterialThemeProvider } from "@material-ui/styles";
 import { StylesProvider } from "@material-ui/core/styles";
 
 import { DefaultLightTheme } from "styles/theme/light";
+import { configureStore } from "config/store";
 
 import styled from "styled-components";
 
@@ -23,27 +25,31 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+const store = configureStore();
+
 const App = () => {
   return (
     <div className="App">
-      <StylesProvider injectFirst>
-        <ThemeProvider theme={DefaultLightTheme}>
-          <MaterialThemeProvider theme={DefaultLightTheme}>
-            <MainStyle />
-            <Router>
-              <Suspense
-                fallback={
-                  <Container>
-                    <LoadingScreen />
-                  </Container>
-                }
-              >
-                <Routes />
-              </Suspense>
-            </Router>
-          </MaterialThemeProvider>
-        </ThemeProvider>
-      </StylesProvider>
+      <ReduxProvider store={store}>
+        <StylesProvider injectFirst>
+          <ThemeProvider theme={DefaultLightTheme}>
+            <MaterialThemeProvider theme={DefaultLightTheme}>
+              <MainStyle />
+              <Router>
+                <Suspense
+                  fallback={
+                    <Container>
+                      <LoadingScreen />
+                    </Container>
+                  }
+                >
+                  <Routes />
+                </Suspense>
+              </Router>
+            </MaterialThemeProvider>
+          </ThemeProvider>
+        </StylesProvider>
+      </ReduxProvider>
     </div>
   );
 };
