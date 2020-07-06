@@ -14,9 +14,14 @@ import {
 } from "@material-ui/core";
 import { Close, CheckOutlined } from "@material-ui/icons";
 import { TextField } from "components/final-form/TextField";
+import { SelectField } from "components/final-form/SelectField";
+import { MenuItem } from "@material-ui/core";
+import { Template } from "store/templates";
+import { TemplateVersionSelector } from "./TemplateVersionSelector";
 
 export type DeploymentFormViewProps = {
   onCloseClick?: () => void;
+  templates: Template[];
 };
 
 const Card = styled(MuiCard)`
@@ -40,7 +45,8 @@ const ActionsBar = styled.div`
 `;
 
 export const DeploymentFormView: React.FC<DeploymentFormViewProps> = ({
-  onCloseClick
+  onCloseClick,
+  templates
 }: DeploymentFormViewProps) => {
   const handleCloseClick = () => {
     onCloseClick && onCloseClick();
@@ -63,18 +69,25 @@ export const DeploymentFormView: React.FC<DeploymentFormViewProps> = ({
         }
       />
       <CardContent>
-        <TextField
-          type="text"
+        <SelectField
           name="templateName"
           label="Template name"
           variant="outlined"
           fullWidth
-        />
+        >
+          {templates.map(template => (
+            <MenuItem key={template._id} value={template.name}>
+              {template.name}
+            </MenuItem>
+          ))}
+        </SelectField>
+
+        <TemplateVersionSelector templates={templates} />
 
         <TextField
           type="text"
-          name="version"
-          label="Version"
+          name="url"
+          label="URL"
           variant="outlined"
           fullWidth
         />

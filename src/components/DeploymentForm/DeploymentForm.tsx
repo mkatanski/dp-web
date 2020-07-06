@@ -1,19 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { ToggleableDrawerContext } from "components/ToggleableDrawer/ToggleableDrawerContext";
 import { GenericForm } from "components/final-form/GenericForm";
 import { DeploymentFormView } from "./DeploymentForm.view";
 import { useDeploymentsResource } from "hooks/useDeploymentsResource";
+import { useTemplatesResource } from "hooks/useTemplatesResource";
+import { useTemplatesData } from "hooks/useTemplatesData";
+import { SubmitValues } from "./_types";
 
 export type DeploymentFormProps = {};
 
-type SubmitValues = {
-  version: string;
-  templateName: string;
-};
-
 export const DeploymentForm: React.FC<DeploymentFormProps> = () => {
   const { setDrawerState } = useContext(ToggleableDrawerContext);
-  const { postData, fetchData } = useDeploymentsResource();
+  const { postData, fetchData: fetchDeployments } = useDeploymentsResource();
+  const { fetchData: fetchTemplates } = useTemplatesResource();
+  const fetchRef = useRef(fetchTemplates);
+  const templates = useTemplatesData();
+
+  useEffect(() => {
+    fetchRef.current();
+  }, [fetchRef]);
 
   return (
     <GenericForm
@@ -23,10 +28,10 @@ export const DeploymentForm: React.FC<DeploymentFormProps> = () => {
         await postData({
           templateName: vals.templateName,
           version: vals.version,
-          url: "https://indust.co"
+          url: vals.url
         });
 
-        fetchData();
+        fetchDeployments();
 
         setDrawerState(false);
       }}
@@ -35,6 +40,7 @@ export const DeploymentForm: React.FC<DeploymentFormProps> = () => {
       <DeploymentFormView
         data-testid="DeploymentFormView"
         onCloseClick={() => setDrawerState(false)}
+        templates={templates}
       />
     </GenericForm>
   );

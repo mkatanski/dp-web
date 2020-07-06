@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SelectField SelectFieldView should render SelectFieldView component 1`] = `
+.c0 {
+  min-width: 100px;
+  width: 100%;
+  margin: 8px 0px;
+}
+
+<div
+  className="c0"
+  data-props={
+    Object {
+      "error": false,
+      "variant": undefined,
+    }
+  }
+  id="MUI.FormControl"
+>
+  <select
+    data-props={
+      Object {
+        "data-testid": "rff-select-test",
+        "id": "test",
+        "inputProps": Object {
+          "data-testid": "rff-select-test-input",
+          "id": "test",
+          "name": "test",
+        },
+        "label": undefined,
+        "labelId": "test-label",
+        "onChange": [Function],
+        "value": "test",
+      }
+    }
+    id="MUI.Select"
+    name="test"
+  />
+</div>
+`;
+
+exports[`components SelectField SelectFieldView should render SelectFieldView component with children 1`] = `
+.c0 {
+  min-width: 100px;
+  width: 100%;
+  margin: 8px 0px;
+}
+
+<div
+  className="c0"
+  data-props={
+    Object {
+      "error": false,
+      "variant": undefined,
+    }
+  }
+  id="MUI.FormControl"
+>
+  <select
+    data-props={
+      Object {
+        "data-testid": "rff-select-test",
+        "id": "test",
+        "inputProps": Object {
+          "data-testid": "rff-select-test-input",
+          "id": "test",
+          "name": "test",
+        },
+        "label": undefined,
+        "labelId": "test-label",
+        "onChange": [Function],
+        "value": "test",
+      }
+    }
+    id="MUI.Select"
+    name="test"
+  >
+    child
+  </select>
+</div>
+`;
+
+exports[`components SelectField SelectFieldView should render SelectFieldView with error 1`] = `
+.c0 {
+  min-width: 100px;
+  width: 100%;
+  margin: 8px 0px;
+}
+
+<div
+  className="c0"
+  data-props={
+    Object {
+      "error": true,
+      "variant": undefined,
+    }
+  }
+  id="MUI.FormControl"
+>
+  <select
+    data-props={
+      Object {
+        "data-testid": "rff-select-test2",
+        "id": "test2",
+        "inputProps": Object {
+          "data-testid": "rff-select-test2-input",
+          "id": "test2",
+          "name": "test2",
+        },
+        "label": undefined,
+        "labelId": "test2-label",
+        "onChange": [Function],
+        "value": "test2",
+      }
+    }
+    id="MUI.Select"
+    name="test2"
+  />
+  <div
+    data-props={Object {}}
+    id="MUI.FormHelperText"
+  >
+    Something went wrong
+  </div>
+</div>
+`;
+
+exports[`components SelectField SelectFieldView should render SelectFieldView with label 1`] = `
+.c0 {
+  min-width: 100px;
+  width: 100%;
+  margin: 8px 0px;
+}
+
+<div
+  className="c0"
+  data-props={
+    Object {
+      "error": false,
+      "variant": undefined,
+    }
+  }
+  id="MUI.FormControl"
+>
+  <div
+    data-props={
+      Object {
+        "id": "test2-label",
+      }
+    }
+    id="MUI.InputLabel"
+  >
+    This is label
+  </div>
+  <select
+    data-props={
+      Object {
+        "data-testid": "rff-select-test2",
+        "id": "test2",
+        "inputProps": Object {
+          "data-testid": "rff-select-test2-input",
+          "id": "test2",
+          "name": "test2",
+        },
+        "label": "This is label",
+        "labelId": "test2-label",
+        "onChange": [Function],
+        "value": "test2",
+      }
+    }
+    id="MUI.Select"
+    name="test2"
+  />
+</div>
+`;
