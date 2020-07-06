@@ -6,6 +6,8 @@ import { useDeploymentsResource } from "hooks/useDeploymentsResource";
 import { useTemplatesResource } from "hooks/useTemplatesResource";
 import { useTemplatesData } from "hooks/useTemplatesData";
 import { SubmitValues } from "./_types";
+import { ValidationErrors } from "final-form";
+import validator from "validator";
 
 export type DeploymentFormProps = {};
 
@@ -36,6 +38,27 @@ export const DeploymentForm: React.FC<DeploymentFormProps> = () => {
         setDrawerState(false);
       }}
       initialValues={{}}
+      validate={(vals): ValidationErrors => {
+        const values = vals as SubmitValues;
+
+        const errors: Record<string, string> = {};
+
+        if (!values.templateName) {
+          errors.templateName = "Required";
+        }
+
+        if (!values.version) {
+          errors.version = "Required";
+        }
+
+        if (!values.url) {
+          errors.url = "Required";
+        } else if (!validator.isURL(values.url)) {
+          errors.url = "Invalid URL address";
+        }
+
+        return errors;
+      }}
     >
       <DeploymentFormView
         data-testid="DeploymentFormView"

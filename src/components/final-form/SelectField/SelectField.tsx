@@ -29,6 +29,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
       value={input.value}
       onChange={handleOnChange}
       errorMessage={meta.error}
+      touched={meta.touched}
     >
       {children}
     </SelectFieldView>

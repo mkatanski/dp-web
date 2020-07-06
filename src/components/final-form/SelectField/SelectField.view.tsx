@@ -15,6 +15,7 @@ export type SelectFieldViewProps = SelectProps & {
   id?: string;
   testId?: string;
   errorMessage?: string;
+  touched?: boolean;
   onChange?: (value: unknown) => void;
 };
 
@@ -34,6 +35,7 @@ export const SelectFieldView: React.FC<SelectFieldViewProps> = ({
   errorMessage: error,
   onChange,
   variant,
+  touched,
   ...rest
 }: SelectFieldViewProps) => {
   const handleChange: SelectProps["onChange"] = event => {
@@ -41,7 +43,7 @@ export const SelectFieldView: React.FC<SelectFieldViewProps> = ({
   };
 
   return (
-    <FormControl variant={variant} error={!!error}>
+    <FormControl variant={variant} error={!!error && touched}>
       {label && <InputLabel id={`${id}-label`}>{label}</InputLabel>}
       <Select
         {...rest}
@@ -60,7 +62,7 @@ export const SelectFieldView: React.FC<SelectFieldViewProps> = ({
       >
         {children}
       </Select>
-      {error && <FormHelperText>{error}</FormHelperText>}
+      {error && touched && <FormHelperText>{error}</FormHelperText>}
     </FormControl>
   );
 };
