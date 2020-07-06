@@ -6,13 +6,14 @@ import {
   CardHeader,
   Divider,
   CardActions as BareCardActions,
-  IconButton
+  Button
 } from "@material-ui/core";
-import { FilterList } from "@material-ui/icons";
+import { Add } from "@material-ui/icons";
 import styled from "styled-components";
 import { ToggleableDrawer } from "components/ToggleableDrawer";
 import { usePaginationData } from "hooks/usePaginationData";
 import { ReducerName } from "store";
+import { DeploymentForm } from "components/DeploymentForm";
 
 export type DataListContainerProps = React.PropsWithChildren<{
   title: string;
@@ -63,12 +64,19 @@ export const DataListContainer: React.FC<DataListContainerProps> = ({
           action={
             <ToggleableDrawer
               renderButton={({ setDrawerState }) => (
-                <IconButton onClick={() => setDrawerState(true)}>
-                  <FilterList />
-                </IconButton>
+                <Button
+                  startIcon={<Add />}
+                  variant="outlined"
+                  color="primary"
+                  onClick={() => setDrawerState(true)}
+                >
+                  New Deployment
+                </Button>
               )}
               drawerAnchor="right"
-            ></ToggleableDrawer>
+            >
+              <DeploymentForm />
+            </ToggleableDrawer>
           }
         />
         <Divider />
