@@ -1,3 +1,5 @@
+import { GenericListState } from "store/_types";
+
 export type Deployment = {
   _id: string;
   templateName: string;
@@ -5,11 +7,8 @@ export type Deployment = {
   pending: boolean;
 };
 
-export type DeploymentState = {
+export type DeploymentState = GenericListState & {
   deployments: Deployment[];
-  totalCount: number;
-  offset: number;
-  limit: number;
 };
 
 export type AppendDeploymentAction = {
