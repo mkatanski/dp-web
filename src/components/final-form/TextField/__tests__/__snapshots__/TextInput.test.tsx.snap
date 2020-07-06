@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components final-form TextField should handle case when field is valid 1`] = `
+<input
+  data-prop={
+    Object {
+      "error": false,
+      "fullWidth": true,
+      "helperText": false,
+      "id": "TextField",
+      "inputProps": Object {
+        "data-testid": "rff-textfield-TextField",
+      },
+      "label": undefined,
+      "multiline": undefined,
+      "rows": undefined,
+      "variant": "outlined",
+    }
+  }
+  id="TextFieldElement"
+/>
+`;
+
+exports[`components final-form TextField should handle case when there is an error 1`] = `
+<input
+  data-prop={
+    Object {
+      "error": true,
+      "fullWidth": true,
+      "helperText": "This field is invalid",
+      "id": "TextField",
+      "inputProps": Object {
+        "data-testid": "rff-textfield-TextField",
+      },
+      "label": undefined,
+      "multiline": undefined,
+      "rows": undefined,
+      "variant": "outlined",
+    }
+  }
+  id="TextFieldElement"
+/>
+`;
