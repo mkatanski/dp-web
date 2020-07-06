@@ -3,6 +3,7 @@ import { Table } from "components/Table";
 import { useSelector } from "react-redux";
 import { RootReducerType } from "store";
 import { Deployment } from "store/deployments";
+import dayjs from "dayjs";
 
 export type PendingRowProps = {
   deployment: Deployment;
@@ -20,7 +21,16 @@ export const PendingRow: React.FC<PendingRowProps> = ({
       {timeLeft && (
         <>
           <Table.TextCell>{deployment.templateName}</Table.TextCell>
-          <Table.TextCell colSpan={4}>PENDING: {timeLeft} left</Table.TextCell>
+          <Table.TextCell colSpan={4}>
+            PENDING:{" "}
+            {dayjs()
+              .hour(0)
+              .minute(0)
+              .second(timeLeft)
+              .format("HH:mm:ss")}
+            {"s "}
+            left
+          </Table.TextCell>
         </>
       )}
       {!timeLeft && (
