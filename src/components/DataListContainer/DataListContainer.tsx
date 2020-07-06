@@ -4,13 +4,10 @@ import {
   CardContent,
   CardHeader,
   Divider,
-  CardActions as BareCardActions,
-  Button
+  CardActions as BareCardActions
 } from "@material-ui/core";
-import { Add } from "@material-ui/icons";
 import styled from "styled-components";
-import { ToggleableDrawer } from "components/ToggleableDrawer";
-import { DeploymentForm } from "components/DeploymentForm";
+
 import { RecordsInfo } from "components/RecordsInfo";
 import { DataListPagination } from "components/DataListPagination";
 
@@ -48,26 +45,7 @@ export const DataListContainer: React.FC<DataListContainerProps> = ({
   <>
     <RecordsInfo />
     <Card>
-      <CardHeader
-        title={title}
-        action={
-          <ToggleableDrawer
-            renderButton={({ setDrawerState }) => (
-              <Button
-                startIcon={<Add />}
-                variant="outlined"
-                color="primary"
-                onClick={() => setDrawerState(true)}
-              >
-                New Deployment
-              </Button>
-            )}
-            drawerAnchor="right"
-          >
-            <DeploymentForm />
-          </ToggleableDrawer>
-        }
-      />
+      <CardHeader title={title} />
       <Divider />
       <StyledCardContent>{children}</StyledCardContent>
       <CardActions>
