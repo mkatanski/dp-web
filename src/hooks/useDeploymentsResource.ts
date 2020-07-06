@@ -3,6 +3,7 @@ import env from "config/vars";
 
 import { useDispatch } from "react-redux";
 import { setDeployments } from "store/deployments";
+import { usePaginationData } from "./usePaginationData";
 
 export type DeploymentItem = {
   deployedAt: string;
@@ -20,10 +21,13 @@ export type DeploymentPostBody = {
 
 export const useDeploymentsResource = () => {
   const dispatch = useDispatch();
+  const { limit, offset } = usePaginationData("deploymentsReducer");
 
   const fetchData = async () => {
     try {
-      const result = await axios.get(`${env.FULL_PUBLIC_API_URL}/deployments`);
+      const result = await axios.get(
+        `${env.FULL_PUBLIC_API_URL}/deployments?limit=${limit}&offset=${offset}`
+      );
       if (result.status >= 300 && result.status < 200) {
         throw new Error(result.statusText);
       }

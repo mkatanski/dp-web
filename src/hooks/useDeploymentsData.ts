@@ -7,7 +7,7 @@ import { DeploymentState } from "store/deployments";
 export const useDeploymentsData = () => {
   const deploymentsStore = useSelector<RootReducerType, DeploymentState>(
     state => state.deploymentsReducer,
-    (left, right) => _.isEqual(left, right)
+    (left, right) => _.isEqual(left.deployments, right.deployments)
   );
 
   return deploymentsStore.deployments;

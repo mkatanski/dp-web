@@ -43,6 +43,20 @@ export const deploymentsReducer = (
       };
     }
 
+    case "UPDATE_DEPLOYMENT_PAGINATION": {
+      const { offset, limit } = action.payload;
+      const getValue = (def: number, n?: number) => {
+        if (typeof n === "undefined") return def;
+        return n;
+      };
+
+      return {
+        ...state,
+        offset: getValue(state.offset, offset),
+        limit: getValue(state.limit, limit)
+      };
+    }
+
     default:
       return state;
   }

@@ -10,13 +10,12 @@ import {
 import { Add } from "@material-ui/icons";
 import styled from "styled-components";
 import { ToggleableDrawer } from "components/ToggleableDrawer";
-import { ReducerName } from "store";
 import { DeploymentForm } from "components/DeploymentForm";
 import { RecordsInfo } from "components/RecordsInfo";
+import { DataListPagination } from "components/DataListPagination";
 
 export type DataListContainerProps = React.PropsWithChildren<{
   title: string;
-  reducer: ReducerName;
 }>;
 
 const Card = styled(MuiCard)`
@@ -44,11 +43,10 @@ const CardActions = styled(BareCardActions)`
 
 export const DataListContainer: React.FC<DataListContainerProps> = ({
   children,
-  reducer,
   title
 }: DataListContainerProps) => (
   <>
-    <RecordsInfo forReducer={reducer} />
+    <RecordsInfo />
     <Card>
       <CardHeader
         title={title}
@@ -72,7 +70,9 @@ export const DataListContainer: React.FC<DataListContainerProps> = ({
       />
       <Divider />
       <StyledCardContent>{children}</StyledCardContent>
-      <CardActions></CardActions>
+      <CardActions>
+        <DataListPagination />
+      </CardActions>
     </Card>
   </>
 );

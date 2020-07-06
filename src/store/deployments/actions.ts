@@ -41,3 +41,19 @@ export const updateDeploymentState = ({
     }
   };
 };
+
+export const updateDeploymentPagination = ({
+  limit,
+  offset
+}: {
+  limit?: number;
+  offset?: number;
+}): DeploymentActionTypes => {
+  return {
+    type: "UPDATE_DEPLOYMENT_PAGINATION",
+    payload: {
+      limit,
+      offset
+    }
+  };
+};

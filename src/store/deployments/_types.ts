@@ -34,7 +34,16 @@ export type UpdateDeploymentStateAction = {
   };
 };
 
+export type UpdateDeploymentsPagination = {
+  type: "UPDATE_DEPLOYMENT_PAGINATION";
+  payload: {
+    limit?: number;
+    offset?: number;
+  };
+};
+
 export type DeploymentActionTypes =
   | AppendDeploymentAction
   | SetDeploymentsAction
-  | UpdateDeploymentStateAction;
+  | UpdateDeploymentStateAction
+  | UpdateDeploymentsPagination;

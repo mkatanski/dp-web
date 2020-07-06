@@ -1,16 +1,14 @@
-import React from "react";
-import { ReducerName } from "store";
+import React, { useContext } from "react";
 import { usePaginationData } from "hooks/usePaginationData";
 import { Typography } from "@material-ui/core";
+import { DataListStateContext } from "components/DataListProvider";
 
-export type RecordsInfoProps = {
-  forReducer: ReducerName;
-};
+export type RecordsInfoProps = {};
 
-export const RecordsInfo: React.FC<RecordsInfoProps> = ({
-  forReducer
-}: RecordsInfoProps) => {
-  const { limit, offset, totalCount } = usePaginationData(forReducer);
+export const RecordsInfo: React.FC<RecordsInfoProps> = () => {
+  const { reducerName } = useContext(DataListStateContext);
+
+  const { limit, offset, totalCount } = usePaginationData(reducerName);
 
   const page = offset > 0 ? offset / limit : 0;
   const totalPages = Math.ceil(totalCount / limit);
