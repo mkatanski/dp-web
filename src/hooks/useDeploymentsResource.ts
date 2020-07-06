@@ -4,6 +4,7 @@ import env from "config/vars";
 import { useDispatch, useStore } from "react-redux";
 import { setDeployments, addToPending } from "store/deployments";
 import { RootReducerType } from "store";
+import { getRandomInt } from "utils/random/getRandomInt";
 
 export type DeploymentItem = {
   deployedAt: string;
@@ -77,7 +78,9 @@ export const useDeploymentsResource = () => {
 
       const item = result.data.item as DeploymentItem;
 
-      dispatch(addToPending(item._id));
+      const seconds = getRandomInt(5, 30);
+
+      dispatch(addToPending(item._id, seconds));
 
       return item;
     } catch (e) {
