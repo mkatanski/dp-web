@@ -9,6 +9,7 @@ import LayoutBase, { LayoutBaseProps } from "layouts/LayoutBase";
 import { TopBar } from "components/TopBar";
 import { Sidebar } from "components/Sidebar";
 import { NavListView } from "views/NavListView";
+import { usePendingTimer } from "hooks/usePendingTimer";
 
 const Container = styled(BareContainer)`
   min-height: 100vh;
@@ -41,22 +42,25 @@ const PageContent = styled(BareContainer)`
 const DefaultLayout: React.FC<LayoutBaseProps> = ({
   children,
   ...rest
-}: LayoutBaseProps) => (
-  <SidebarStateProvider>
-    <TopBar>
-      <h3>Template Deployments</h3>
-    </TopBar>
-    <Sidebar>
-      <NavListView />
-    </Sidebar>
-    <Container maxWidth={false}>
-      <Content maxWidth={false}>
-        <PageContent maxWidth={false}>
-          <LayoutBase {...rest}>{children}</LayoutBase>
-        </PageContent>
-      </Content>
-    </Container>
-  </SidebarStateProvider>
-);
+}: LayoutBaseProps) => {
+  usePendingTimer();
+  return (
+    <SidebarStateProvider>
+      <TopBar>
+        <h3>Template Deployments</h3>
+      </TopBar>
+      <Sidebar>
+        <NavListView />
+      </Sidebar>
+      <Container maxWidth={false}>
+        <Content maxWidth={false}>
+          <PageContent maxWidth={false}>
+            <LayoutBase {...rest}>{children}</LayoutBase>
+          </PageContent>
+        </Content>
+      </Container>
+    </SidebarStateProvider>
+  );
+};
 
 export default DefaultLayout;

@@ -2,7 +2,7 @@ import axios from "axios";
 import env from "config/vars";
 
 import { useDispatch, useStore } from "react-redux";
-import { setDeployments } from "store/deployments";
+import { setDeployments, addToPending } from "store/deployments";
 import { RootReducerType } from "store";
 
 export type DeploymentItem = {
@@ -50,7 +50,6 @@ export const useDeploymentsResource = () => {
         setDeployments(
           items.map(item => ({
             _id: item._id,
-            pending: false,
             templateName: item.templateName,
             version: item.version,
             url: item.url,
@@ -76,7 +75,10 @@ export const useDeploymentsResource = () => {
         throw new Error(result.statusText);
       }
 
-      const item = result.data.item as DeploymentItem[];
+      const item = result.data.item as DeploymentItem;
+
+      dispatch(addToPending(item._id));
+
       return item;
     } catch (e) {
       // Do nothing for now

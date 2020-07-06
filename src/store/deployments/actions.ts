@@ -57,3 +57,22 @@ export const updateDeploymentPagination = ({
     }
   };
 };
+
+export const pendingTimerTick = (): DeploymentActionTypes => {
+  return {
+    type: "TIMER_TICK"
+  };
+};
+
+export const addToPending = (
+  id: string,
+  timeLeft = 30
+): DeploymentActionTypes => {
+  return {
+    type: "ADD_TO_PENDING",
+    payload: {
+      id,
+      timeLeft
+    }
+  };
+};
