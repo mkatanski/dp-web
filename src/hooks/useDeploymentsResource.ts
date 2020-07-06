@@ -23,8 +23,18 @@ export const useDeploymentsResource = () => {
   const dispatch = useDispatch();
   const { getState } = useStore<RootReducerType>();
 
-  const fetchData = async () => {
-    const { offset, limit } = getState().deploymentsReducer;
+  const fetchData = async (overrides?: { offset?: number; limit?: number }) => {
+    const {
+      offset: storeOffset,
+      limit: storeLimit
+    } = getState().deploymentsReducer;
+
+    const offset = Number.isInteger(overrides?.offset)
+      ? overrides?.offset
+      : storeOffset;
+    const limit = Number.isInteger(overrides?.limit)
+      ? overrides?.limit
+      : storeLimit;
 
     try {
       const result = await axios.get(
