@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Card as MuiCard,
-  Typography,
   CardContent,
   CardHeader,
   Divider,
@@ -11,9 +10,9 @@ import {
 import { Add } from "@material-ui/icons";
 import styled from "styled-components";
 import { ToggleableDrawer } from "components/ToggleableDrawer";
-import { usePaginationData } from "hooks/usePaginationData";
 import { ReducerName } from "store";
 import { DeploymentForm } from "components/DeploymentForm";
+import { RecordsInfo } from "components/RecordsInfo";
 
 export type DataListContainerProps = React.PropsWithChildren<{
   title: string;
@@ -47,42 +46,33 @@ export const DataListContainer: React.FC<DataListContainerProps> = ({
   children,
   reducer,
   title
-}: DataListContainerProps) => {
-  const { limit, offset, totalCount } = usePaginationData(reducer);
-
-  const page = offset > 0 ? offset / limit : 0;
-  const totalPages = Math.ceil(totalCount / limit);
-
-  return (
-    <>
-      <Typography color="textSecondary" gutterBottom variant="body2">
-        {totalCount} records found. Page {page + 1} of {totalPages}
-      </Typography>
-      <Card>
-        <CardHeader
-          title={title}
-          action={
-            <ToggleableDrawer
-              renderButton={({ setDrawerState }) => (
-                <Button
-                  startIcon={<Add />}
-                  variant="outlined"
-                  color="primary"
-                  onClick={() => setDrawerState(true)}
-                >
-                  New Deployment
-                </Button>
-              )}
-              drawerAnchor="right"
-            >
-              <DeploymentForm />
-            </ToggleableDrawer>
-          }
-        />
-        <Divider />
-        <StyledCardContent>{children}</StyledCardContent>
-        <CardActions></CardActions>
-      </Card>
-    </>
-  );
-};
+}: DataListContainerProps) => (
+  <>
+    <RecordsInfo forReducer={reducer} />
+    <Card>
+      <CardHeader
+        title={title}
+        action={
+          <ToggleableDrawer
+            renderButton={({ setDrawerState }) => (
+              <Button
+                startIcon={<Add />}
+                variant="outlined"
+                color="primary"
+                onClick={() => setDrawerState(true)}
+              >
+                New Deployment
+              </Button>
+            )}
+            drawerAnchor="right"
+          >
+            <DeploymentForm />
+          </ToggleableDrawer>
+        }
+      />
+      <Divider />
+      <StyledCardContent>{children}</StyledCardContent>
+      <CardActions></CardActions>
+    </Card>
+  </>
+);
