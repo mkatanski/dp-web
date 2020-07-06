@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { useDeploymentsResource } from "hooks/useDeploymentsResource";
 import { Table } from "components/Table";
 import { DataListContainer } from "components/DataListContainer";
 import { DataListProvider } from "components/DataListProvider";
 import { useDispatch } from "react-redux";
-import { updateDeploymentPagination } from "store/deployments";
+import { updateTemplatesPagination } from "store/templates";
 import _ from "lodash";
 import { TemplatesTableViewRows } from "./TemplatesTableViewRows";
+import { useTemplatesResource } from "hooks/useTemplatesResource";
 
 export type TemplatesTableViewProps = {};
 
 export const TemplatesTableView: React.FC<TemplatesTableViewProps> = () => {
-  const { fetchData } = useDeploymentsResource();
+  const { fetchData } = useTemplatesResource();
   const fetchRef = useRef(fetchData);
   const dispatch = _.debounce(useDispatch(), 100);
 
@@ -20,13 +20,13 @@ export const TemplatesTableView: React.FC<TemplatesTableViewProps> = () => {
   }, [fetchRef]);
 
   const handleOnPaginationChange = (newOffset: number) => {
-    dispatch(updateDeploymentPagination({ offset: newOffset }));
+    dispatch(updateTemplatesPagination({ offset: newOffset }));
     fetchRef.current({ offset: newOffset });
   };
 
   return (
     <DataListProvider
-      reducerName="deploymentsReducer"
+      reducerName="templatesReducer"
       onPaginationChange={handleOnPaginationChange}
     >
       <DataListContainer title="Templates">

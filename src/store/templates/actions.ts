@@ -16,3 +16,19 @@ export const setTemplates = (
     }
   };
 };
+
+export const updateTemplatesPagination = ({
+  limit,
+  offset
+}: {
+  limit?: number;
+  offset?: number;
+}): TemplatesActionTypes => {
+  return {
+    type: "UPDATE_TEMPLATES_PAGINATION",
+    payload: {
+      limit,
+      offset
+    }
+  };
+};

@@ -20,4 +20,14 @@ export type SetTemplatesAction = {
   };
 };
 
-export type TemplatesActionTypes = SetTemplatesAction;
+export type UpdateTemplatesPagination = {
+  type: "UPDATE_TEMPLATES_PAGINATION";
+  payload: {
+    limit?: number;
+    offset?: number;
+  };
+};
+
+export type TemplatesActionTypes =
+  | SetTemplatesAction
+  | UpdateTemplatesPagination;
