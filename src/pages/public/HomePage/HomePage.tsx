@@ -6,8 +6,8 @@ import { DataListContainer } from "components/DataListContainer";
 import { useDeploymentsData } from "hooks/useDeploymentsData";
 
 const HomeView: React.FC = () => {
-  const fetch = useDeploymentsResource();
-  const fetchRef = useRef(fetch);
+  const { fetchData } = useDeploymentsResource();
+  const fetchRef = useRef(fetchData);
 
   const deployments = useDeploymentsData();
 
