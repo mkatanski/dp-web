@@ -33,9 +33,11 @@ export const DeploymentsTableView: React.FC<DeploymentsTableViewProps> = () => {
         <Table striped>
           <Table.Head>
             <Table.Row>
-              <Table.Header width={160}>ID</Table.Header>
               <Table.Header width={160}>Template Name</Table.Header>
+              <Table.Header width={160}>Url</Table.Header>
               <Table.Header width={160}>Version</Table.Header>
+              <Table.Header width={160}>Deployed At</Table.Header>
+              <Table.Header width={160}>Actions</Table.Header>
             </Table.Row>
           </Table.Head>
           <Table.Body>

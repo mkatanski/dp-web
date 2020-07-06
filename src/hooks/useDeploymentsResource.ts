@@ -52,7 +52,9 @@ export const useDeploymentsResource = () => {
             _id: item._id,
             pending: false,
             templateName: item.templateName,
-            version: item.version
+            version: item.version,
+            url: item.url,
+            deployedAt: item.deployedAt
           })),
           result.data.limit,
           result.data.offset,

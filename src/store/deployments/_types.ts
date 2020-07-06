@@ -5,6 +5,8 @@ export type Deployment = {
   templateName: string;
   version: string;
   pending: boolean;
+  url: string;
+  deployedAt: string;
 };
 
 export type DeploymentState = GenericListState & {

@@ -11,9 +11,11 @@ export const DeploymentsTableViewRows: React.FC<DeploymentsTableViewRowsProps> =
     <>
       {deployments.map(deployment => (
         <Table.Row key={deployment._id}>
-          <Table.TextCell>{deployment._id}</Table.TextCell>
           <Table.TextCell>{deployment.templateName}</Table.TextCell>
+          <Table.TextCell>{deployment.url}</Table.TextCell>
           <Table.TextCell>{deployment.version}</Table.TextCell>
+          <Table.TextCell>{deployment.deployedAt}</Table.TextCell>
+          <Table.TextCell>remove</Table.TextCell>
         </Table.Row>
       ))}
     </>
