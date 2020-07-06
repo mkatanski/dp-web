@@ -1,9 +1,9 @@
 import axios from "axios";
 import env from "config/vars";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useStore } from "react-redux";
 import { setDeployments } from "store/deployments";
-import { usePaginationData } from "./usePaginationData";
+import { RootReducerType } from "store";
 
 export type DeploymentItem = {
   deployedAt: string;
@@ -21,9 +21,11 @@ export type DeploymentPostBody = {
 
 export const useDeploymentsResource = () => {
   const dispatch = useDispatch();
-  const { limit, offset } = usePaginationData("deploymentsReducer");
+  const { getState } = useStore<RootReducerType>();
 
   const fetchData = async () => {
+    const { offset, limit } = getState().deploymentsReducer;
+
     try {
       const result = await axios.get(
         `${env.FULL_PUBLIC_API_URL}/deployments?limit=${limit}&offset=${offset}`

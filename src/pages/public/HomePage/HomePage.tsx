@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { PageTitle } from "components/PageTitle";
 import { useDeploymentsResource } from "hooks/useDeploymentsResource";
 import { Table } from "components/Table";
@@ -7,16 +7,19 @@ import { useDeploymentsData } from "hooks/useDeploymentsData";
 import { DataListProvider } from "components/DataListProvider";
 import { useDispatch } from "react-redux";
 import { updateDeploymentPagination } from "store/deployments";
+import _ from "lodash";
+import { usePaginationData } from "hooks/usePaginationData";
 
 const HomeView: React.FC = () => {
   const { fetchData } = useDeploymentsResource();
-  const dispatch = useDispatch();
-
+  const fetchRef = useRef(fetchData);
+  const dispatch = _.debounce(useDispatch(), 100);
   const deployments = useDeploymentsData();
+  const { offset } = usePaginationData("deploymentsReducer");
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchRef.current();
+  }, [fetchRef, offset]);
 
   const handleOnPaginationChange = (newOffset: number) => {
     dispatch(updateDeploymentPagination({ offset: newOffset }));

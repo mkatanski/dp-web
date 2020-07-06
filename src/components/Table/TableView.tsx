@@ -17,7 +17,7 @@ export const TableView = styled<React.ComponentType<TableViewProps>>(props => (
   }
 
   td {
-    padding: ${({ theme }) => theme.spacing(3, 2)};
+    padding: ${({ theme }) => theme.spacing(2, 2)};
   }
 
   tr:nth-child(even) {
