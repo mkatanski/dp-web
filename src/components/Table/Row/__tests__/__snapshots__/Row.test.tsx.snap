@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Row should render Row component 1`] = `
+.c0 {
+  cursor: default;
+}
+
+<tr
+  className="c0"
+  id="MUI.TableRow"
+/>
+`;
+
+exports[`components Row should render Row component with onClick 1`] = `
+.c0 {
+  cursor: pointer;
+}
+
+<tr
+  className="c0"
+  id="MUI.TableRow"
+  onClick={[Function]}
+/>
+`;

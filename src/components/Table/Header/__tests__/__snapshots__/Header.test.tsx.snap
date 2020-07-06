@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Header should render Header component 1`] = `
+.c0 {
+  cursor: default;
+}
+
+.c0.c0 {
+  min-width: inherit;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+>
+  <div
+    data-props={
+      Object {
+        "active": false,
+        "direction": undefined,
+      }
+    }
+    id="MUI.TableSortLabel"
+  />
+</td>
+`;
+
+exports[`components Header should render Header component with ASC sort order 1`] = `
+.c0 {
+  cursor: default;
+}
+
+.c0.c0 {
+  min-width: inherit;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+>
+  <div
+    data-props={
+      Object {
+        "active": true,
+        "direction": "asc",
+      }
+    }
+    id="MUI.TableSortLabel"
+  />
+</td>
+`;
+
+exports[`components Header should render Header component with DESC sort order 1`] = `
+.c0 {
+  cursor: default;
+}
+
+.c0.c0 {
+  min-width: inherit;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+>
+  <div
+    data-props={
+      Object {
+        "active": true,
+        "direction": "desc",
+      }
+    }
+    id="MUI.TableSortLabel"
+  />
+</td>
+`;
+
+exports[`components Header should render Header component with onClick 1`] = `
+.c0 {
+  cursor: pointer;
+}
+
+.c0.c0 {
+  min-width: inherit;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+  onClick={[Function]}
+>
+  <div
+    data-props={
+      Object {
+        "active": false,
+        "direction": undefined,
+      }
+    }
+    id="MUI.TableSortLabel"
+  />
+</td>
+`;
+
+exports[`components Header should render Header component with specific width 1`] = `
+.c0 {
+  cursor: default;
+}
+
+.c0.c0 {
+  min-width: 145px;
+}
+
+<td
+  className="c0"
+  data-props={
+    Object {
+      "width": 145,
+    }
+  }
+  id="MUI.TableCell"
+>
+  <div
+    data-props={
+      Object {
+        "active": false,
+        "direction": undefined,
+      }
+    }
+    id="MUI.TableSortLabel"
+  />
+</td>
+`;

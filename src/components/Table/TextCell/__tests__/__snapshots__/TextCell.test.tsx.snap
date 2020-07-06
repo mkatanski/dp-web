@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components TextCell should render TextCell component 1`] = `
+.c0 {
+  cursor: inherit;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+/>
+`;
+
+exports[`components TextCell should render TextCell component with onClick 1`] = `
+.c0 {
+  cursor: pointer;
+}
+
+<td
+  className="c0"
+  data-props={Object {}}
+  id="MUI.TableCell"
+  onClick={[Function]}
+/>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Table TableView should render TableView component 1`] = `
+.c0 {
+  position: absolute;
+}
+
+.c0 th {
+  padding: 8px 16px;
+}
+
+.c0 td {
+  padding: 2px 16px;
+}
+
+.c0 tr:nth-child(even) {
+  background: inherit;
+}
+
+<table
+  className="c0"
+  data-props={
+    Object {
+      "stickyHeader": true,
+    }
+  }
+  id="MUI.Table"
+/>
+`;
+
+exports[`components Table TableView should render TableView component striped 1`] = `
+.c0 {
+  position: absolute;
+}
+
+.c0 th {
+  padding: 8px 16px;
+}
+
+.c0 td {
+  padding: 2px 16px;
+}
+
+.c0 tr:nth-child(even) {
+  background: tableRowBgEven;
+}
+
+<table
+  className="c0"
+  data-props={
+    Object {
+      "stickyHeader": true,
+    }
+  }
+  id="MUI.Table"
+/>
+`;
+
+exports[`components Table TableView should render TableView component with children 1`] = `
+.c0 {
+  position: absolute;
+}
+
+.c0 th {
+  padding: 8px 16px;
+}
+
+.c0 td {
+  padding: 2px 16px;
+}
+
+.c0 tr:nth-child(even) {
+  background: inherit;
+}
+
+<table
+  className="c0"
+  data-props={
+    Object {
+      "stickyHeader": true,
+    }
+  }
+  id="MUI.Table"
+>
+  child
+</table>
+`;
