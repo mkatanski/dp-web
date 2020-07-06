@@ -10,7 +10,7 @@ exports[`components Table TableView should render TableView component 1`] = `
 }
 
 .c0 td {
-  padding: 2px 16px;
+  padding: 16px 16px;
 }
 
 .c0 tr:nth-child(even) {
@@ -38,11 +38,11 @@ exports[`components Table TableView should render TableView component striped 1`
 }
 
 .c0 td {
-  padding: 2px 16px;
+  padding: 16px 16px;
 }
 
 .c0 tr:nth-child(even) {
-  background: tableRowBgEven;
+  background: #fafafa;
 }
 
 <table
@@ -66,7 +66,7 @@ exports[`components Table TableView should render TableView component with child
 }
 
 .c0 td {
-  padding: 2px 16px;
+  padding: 16px 16px;
 }
 
 .c0 tr:nth-child(even) {

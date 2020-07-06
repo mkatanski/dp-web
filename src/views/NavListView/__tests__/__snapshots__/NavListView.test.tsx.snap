@@ -36,6 +36,11 @@ exports[`views NavListView should render NavListView component 1`] = `
               href="/deployments"
               title="Deployments"
             />
+            <NavItem
+              depth={1}
+              href="/templates"
+              title="Templates"
+            />
           </List>,
           "depth": 0,
           "href": "",

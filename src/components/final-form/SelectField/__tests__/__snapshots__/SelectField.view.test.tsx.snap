@@ -91,7 +91,7 @@ exports[`components SelectField SelectFieldView should render SelectFieldView wi
   className="c0"
   data-props={
     Object {
-      "error": true,
+      "error": undefined,
       "variant": undefined,
     }
   }
@@ -116,12 +116,6 @@ exports[`components SelectField SelectFieldView should render SelectFieldView wi
     id="MUI.Select"
     name="test2"
   />
-  <div
-    data-props={Object {}}
-    id="MUI.FormHelperText"
-  >
-    Something went wrong
-  </div>
 </div>
 `;
 

@@ -10,7 +10,7 @@ exports[`components should render TableView component with maxHeight 1`] = `
 }
 
 .c1 td {
-  padding: 2px 16px;
+  padding: 16px 16px;
 }
 
 .c1 tr:nth-child(even) {
