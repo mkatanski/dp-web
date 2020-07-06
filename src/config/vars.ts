@@ -1,5 +1,5 @@
 const getApiUrl = () =>
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV !== "development"
     ? "http://deployapi.mkatanski.com/api"
     : "http://localhost:8080/api";
 

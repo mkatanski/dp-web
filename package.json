@@ -52,7 +52,10 @@
     "reinstall:regenerate-lock": "rm -rf node_modules && yarn cache clean && rm -rf yarn.lock && yarn install",
     "pretty": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint --config ./.eslintrc --format table 'src/**/*.{ts,tsx}' && tsc --noEmit",
-    "open:cover": "open coverage/lcov-report/index.html"
+    "open:cover": "open coverage/lcov-report/index.html",
+    "provision": "aws cloudformation deploy --template-file ./.cloudformation/host.yml --stack-name hosting-bucket",
+    "upload": "aws s3 sync build/ s3://template-deploy-bucket-mkatanski --delete",
+    "deploy": "yarn build && yarn upload"
   },
   "eslintConfig": {
     "extends": "react-app"

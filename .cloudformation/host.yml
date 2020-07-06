@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  BucketName:
+    Type: String
+    Default: template-deploy-bucket-mkatanski
+
+Resources:
+  TdBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+
+
+  TdBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref TdBucket
+      PolicyDocument:
+        Id: MyPolicy
+        Version: 2012-10-17
+        Statement:
+          - Sid: PublicReadForGetBucketObjects
+            Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Join ['', ['arn:aws:s3:::', !Ref TdBucket, /*]]
+
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt TdBucket.WebsiteURL
+    Description: Frontend URL
