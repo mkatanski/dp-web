@@ -20,11 +20,8 @@ export const NavListView: React.FC = () => (
     <Nav>
       <NavItem title="General" depth={0} icon={Dashboard} href="" isOpen>
         <List>
-          <NavItem
-            title="Deployments"
-            href={paths.deployments}
-            depth={1}
-          ></NavItem>
+          <NavItem title="Deployments" href={paths.deployments} depth={1} />
+          <NavItem title="Templates" href={paths.templates} depth={1} />
         </List>
       </NavItem>
     </Nav>
