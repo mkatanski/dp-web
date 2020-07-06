@@ -26,22 +26,6 @@ export const appendDeployment = (
   };
 };
 
-export const updateDeploymentState = ({
-  id,
-  isPending
-}: {
-  id: string;
-  isPending: boolean;
-}): DeploymentActionTypes => {
-  return {
-    type: "UPDATE_DEPLOYMENT_STATE",
-    payload: {
-      id,
-      pending: isPending
-    }
-  };
-};
-
 export const updateDeploymentPagination = ({
   limit,
   offset

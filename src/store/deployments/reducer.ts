@@ -29,10 +29,6 @@ export const deploymentsReducer = (
         deployments: [...state.deployments, action.payload]
       };
 
-    case "UPDATE_DEPLOYMENT_STATE": {
-      return state;
-    }
-
     case "UPDATE_DEPLOYMENT_PAGINATION": {
       const { offset, limit } = action.payload;
       const getValue = (def: number, n?: number) => {

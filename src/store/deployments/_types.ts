@@ -28,14 +28,6 @@ export type SetDeploymentsAction = {
   };
 };
 
-export type UpdateDeploymentStateAction = {
-  type: "UPDATE_DEPLOYMENT_STATE";
-  payload: {
-    id: string;
-    pending: boolean;
-  };
-};
-
 export type UpdateDeploymentsPagination = {
   type: "UPDATE_DEPLOYMENT_PAGINATION";
   payload: {
@@ -59,7 +51,6 @@ export type AddItemToPendingState = {
 export type DeploymentActionTypes =
   | AppendDeploymentAction
   | SetDeploymentsAction
-  | UpdateDeploymentStateAction
   | UpdateDeploymentsPagination
   | TimerTick
   | AddItemToPendingState;
