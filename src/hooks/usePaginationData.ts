@@ -2,8 +2,7 @@ import { useSelector } from "react-redux";
 import _ from "lodash";
 
 import { RootReducerType, ReducerName } from "store";
-
-type GenericListState = { limit: number; offset: number; totalCount: number };
+import { GenericListState } from "store/_types";
 
 export const usePaginationData = (name: ReducerName) => {
   const deploymentsStore = useSelector<RootReducerType, GenericListState>(
