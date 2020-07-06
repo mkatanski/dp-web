@@ -7,6 +7,9 @@ export type Deployment = {
 
 export type DeploymentState = {
   deployments: Deployment[];
+  totalCount: number;
+  offset: number;
+  limit: number;
 };
 
 export type AppendDeploymentAction = {
@@ -16,7 +19,12 @@ export type AppendDeploymentAction = {
 
 export type SetDeploymentsAction = {
   type: "SET_DEPLOYMENTS";
-  payload: Deployment[];
+  payload: {
+    total: number;
+    offset: number;
+    limit: number;
+    deployments: Deployment[];
+  };
 };
 
 export type UpdateDeploymentStateAction = {

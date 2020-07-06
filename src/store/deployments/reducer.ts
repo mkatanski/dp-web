@@ -1,7 +1,10 @@
 import { DeploymentState, DeploymentActionTypes } from "./_types";
 
 export const initialState: DeploymentState = {
-  deployments: []
+  deployments: [],
+  limit: 10,
+  offset: 0,
+  totalCount: 0
 };
 
 export const deploymentsReducer = (
@@ -12,7 +15,10 @@ export const deploymentsReducer = (
     case "SET_DEPLOYMENTS":
       return {
         ...state,
-        deployments: action.payload
+        deployments: action.payload.deployments,
+        limit: action.payload.limit,
+        offset: action.payload.offset,
+        totalCount: action.payload.total
       };
 
     case "APPEND_DEPLOYMENT":

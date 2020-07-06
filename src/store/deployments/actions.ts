@@ -1,11 +1,19 @@
 import { DeploymentActionTypes, Deployment } from "./_types";
 
 export const setDeployments = (
-  deployments: Deployment[]
+  deployments: Deployment[],
+  limit: number,
+  offset: number,
+  total: number
 ): DeploymentActionTypes => {
   return {
     type: "SET_DEPLOYMENTS",
-    payload: deployments
+    payload: {
+      deployments,
+      limit,
+      offset,
+      total
+    }
   };
 };
 
