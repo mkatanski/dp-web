@@ -88,5 +88,18 @@ export const useDeploymentsResource = () => {
     }
   };
 
-  return { fetchData, postData };
+  const deleteItem = async (id: string) => {
+    try {
+      const result = await axios.delete(
+        `${env.FULL_PUBLIC_API_URL}/deployments/${id}`
+      );
+      if (result.status >= 300 && result.status < 200) {
+        throw new Error(result.statusText);
+      }
+    } catch (e) {
+      // Do nothing for now
+    }
+  };
+
+  return { fetchData, postData, deleteItem };
 };
