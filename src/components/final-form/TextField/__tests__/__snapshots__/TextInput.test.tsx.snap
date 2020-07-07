@@ -1,8 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components final-form TextField should handle case when field is valid 1`] = `
+.c0 .MuiFormLabel-root.Mui-error > span {
+  color: textSecondary;
+  opacity: 0.6;
+}
+
+.c0 .MuiFormLabel-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: textSecondary;
+}
+
+.c0 .MuiFormHelperText-root {
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.c0 .MuiSvgIcon-root {
+  color: textSecondary;
+}
+
+.c0 .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid rgb(96,109,187);
+}
+
+.c0 .MuiInput-underline:before,
+.c0 .MuiInput-underline:after {
+  border-bottom: 1px solid rgb(96,109,187);
+}
+
+.c0.c0 {
+  margin: 10px 0;
+}
+
+.c0 fieldset {
+  outline: none;
+}
+
 <input
-  data-prop={
+  className="c0"
+  data-props={
     Object {
       "error": false,
       "fullWidth": true,
@@ -17,13 +53,49 @@ exports[`components final-form TextField should handle case when field is valid 
       "variant": "outlined",
     }
   }
-  id="TextFieldElement"
+  id="MUI.TextField"
 />
 `;
 
 exports[`components final-form TextField should handle case when there is an error 1`] = `
+.c0 .MuiFormLabel-root.Mui-error > span {
+  color: textSecondary;
+  opacity: 0.6;
+}
+
+.c0 .MuiFormLabel-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: textSecondary;
+}
+
+.c0 .MuiFormHelperText-root {
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.c0 .MuiSvgIcon-root {
+  color: textSecondary;
+}
+
+.c0 .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid rgb(96,109,187);
+}
+
+.c0 .MuiInput-underline:before,
+.c0 .MuiInput-underline:after {
+  border-bottom: 1px solid rgb(96,109,187);
+}
+
+.c0.c0 {
+  margin: 10px 0;
+}
+
+.c0 fieldset {
+  outline: none;
+}
+
 <input
-  data-prop={
+  className="c0"
+  data-props={
     Object {
       "error": true,
       "fullWidth": true,
@@ -38,6 +110,6 @@ exports[`components final-form TextField should handle case when there is an err
       "variant": "outlined",
     }
   }
-  id="TextFieldElement"
+  id="MUI.TextField"
 />
 `;

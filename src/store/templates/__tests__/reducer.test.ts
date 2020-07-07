@@ -25,20 +25,21 @@ describe("store/deployments", () => {
         )
       )
     ).toEqual({
-      deployments: [
+      limit: 10,
+      offset: 10,
+      templates: [
         {
           _id: "id1",
-          pending: true,
-          templateName: "temp1",
-          version: "1.0.2"
+          name: "name1",
+          versions: ["v1", "v2"]
         },
         {
           _id: "id2",
-          pending: false,
-          templateName: "temp2",
-          version: "1.4.9"
+          name: "name2",
+          versions: ["v1", "v2"]
         }
-      ]
+      ],
+      totalCount: 100
     });
   });
 });

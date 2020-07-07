@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components RecordsInfo should render RecordsInfo component 1`] = `
+<div
+  data-props={
+    Object {
+      "color": "textSecondary",
+      "gutterBottom": true,
+      "variant": "body2",
+    }
+  }
+  id="MUI.Typography"
+>
+  100
+   records found. Page 
+  3
+   of 
+  10
+</div>
+`;

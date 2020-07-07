@@ -21,7 +21,9 @@ import { DataListProvider } from "../DataListProvider";
 describe("components", () => {
   describe("DataListProvider", () => {
     it("should render DataListProvider component", () => {
-      const tree = TestRenderer.create(<DataListProvider />);
+      const tree = TestRenderer.create(
+        <DataListProvider reducerName="deploymentsReducer" />
+      );
 
       expect(tree).toMatchSnapshot();
     });

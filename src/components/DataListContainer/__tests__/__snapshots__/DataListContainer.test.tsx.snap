@@ -3,21 +3,9 @@
 exports[`components DataListContainer should render DataListContainer with records data  1`] = `
 Array [
   <div
-    data-props={
-      Object {
-        "color": "textSecondary",
-        "gutterBottom": true,
-        "variant": "body2",
-      }
-    }
-    id="MUI.Typography"
-  >
-    2345
-     Records found. Page 
-    12
-     of 
-    3
-  </div>,
+    data-props={Object {}}
+    id="RecordsInfo"
+  />,
   .c0 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -66,12 +54,6 @@ Array [
     <div
       data-props={
         Object {
-          "action": <ToggleableDrawer
-            drawerAnchor="right"
-            renderButton={[Function]}
-          >
-            <FiltersForm />
-          </ToggleableDrawer>,
           "title": "test_title",
         }
       }

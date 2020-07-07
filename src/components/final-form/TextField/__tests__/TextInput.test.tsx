@@ -2,20 +2,12 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
 import "jest-styled-components";
-import { useField } from "hooks/useField";
+import { useField } from "react-final-form";
 
 import { TextField } from "../TextField";
+import { withThemeProvider } from "_test-helpers";
 
-// Uncomment below if You need/want to use enzyme
-// import enzyme from "enzyme";
-
-jest.mock("components/forms/TextField/TextFieldElement", () => ({
-  TextFieldElement: ({ ...rest }: React.FC<{}>) => (
-    <input id="TextFieldElement" data-prop={rest} />
-  )
-}));
-
-jest.mock("hooks/useField", () => ({
+jest.mock("react-final-form", () => ({
   useField: jest.fn()
 }));
 
@@ -34,7 +26,9 @@ describe("components", () => {
         });
         const validateFn = jest.fn();
         const tree = TestRenderer.create(
-          <TextField name="TextField" validate={validateFn} />
+          withThemeProvider(
+            <TextField name="TextField" validate={validateFn} />
+          )
         );
         expect(mockUseField).toHaveBeenCalledWith("TextField", {
           type: undefined,
@@ -53,7 +47,9 @@ describe("components", () => {
         });
         const validateFn = jest.fn();
         const tree = TestRenderer.create(
-          <TextField name="TextField" validate={validateFn} />
+          withThemeProvider(
+            <TextField name="TextField" validate={validateFn} />
+          )
         );
         expect(mockUseField).toHaveBeenCalledWith("TextField", {
           type: undefined,

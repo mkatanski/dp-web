@@ -12,6 +12,18 @@ jest.mock("components/PageTitle", () => ({
   )
 }));
 
+jest.mock("views/DeploymentsTableView", () => ({
+  DeploymentsTableView: ({ ...rest }: React.PropsWithChildren<{}>) => (
+    <div id="DeploymentsTableView" data-props={rest} />
+  )
+}));
+
+jest.mock("components/ToggleableDrawer", () => ({
+  ToggleableDrawer: ({ ...rest }: React.PropsWithChildren<{}>) => (
+    <div id="ToggleableDrawer" data-props={rest} />
+  )
+}));
+
 describe("pages", () => {
   describe("protected", () => {
     describe("HomePage", () => {

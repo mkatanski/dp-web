@@ -37,6 +37,10 @@ jest.mock("views/NavListView", () => ({
   NavListView: ({ ...rest }) => <div id="NavListView" data-props={rest} />
 }));
 
+jest.mock("hooks/usePendingTimer", () => ({
+  usePendingTimer: jest.fn()
+}));
+
 describe("layouts", () => {
   describe("DefaultLayout", () => {
     it("should render DefaultLayout with children", () => {

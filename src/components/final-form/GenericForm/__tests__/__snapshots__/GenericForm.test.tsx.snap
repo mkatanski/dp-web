@@ -1,27 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components GenericForm should render GenericForm component with Field component 1`] = `
-<div
-  data-props={
-    Object {
-      "name": "",
-      "uid": "genericForm",
-    }
-  }
-  id="FormGroup"
+<form
+  onSubmit={[Function]}
 >
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      name="nickname"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      placeholder="Nickname"
-      type="text"
-      value="MirasHandlarz"
-    />
-  </form>
-</div>
+  <input
+    name="nickname"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Nickname"
+    type="text"
+    value="MirasHandlarz"
+  />
+</form>
 `;

@@ -7,22 +7,6 @@ import { render, fireEvent, wait } from "@testing-library/react";
 
 import { GenericForm } from "../GenericForm";
 
-jest.mock("lib/forms-ui", () => ({
-  ...require.requireActual("lib/forms-ui"),
-  FormGroup: ({
-    children,
-    className,
-    ...rest
-  }: {
-    className: string;
-    children: () => React.ReactNode;
-  }) => (
-    <div id="FormGroup" className={className} data-props={rest}>
-      {children()}
-    </div>
-  )
-}));
-
 describe("components", () => {
   describe("GenericForm", () => {
     const submitHandler: jest.Mock = jest.fn();

@@ -24,6 +24,15 @@ jest.mock(
 );
 
 jest.mock(
+  "pages/public/TemplatesPage",
+  () => ({ children, ...rest }: React.PropsWithChildren<{}>) => (
+    <div id="TemplatesPage" {...rest}>
+      {children}
+    </div>
+  )
+);
+
+jest.mock(
   "layouts/DefaultLayout",
   () => ({ children, ...rest }: React.PropsWithChildren<{}>) => (
     <div id="DefaultLayout" {...rest}>

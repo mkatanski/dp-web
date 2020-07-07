@@ -5,9 +5,8 @@ import "jest-styled-components";
 import { withThemeProvider } from "_test-helpers";
 
 import { DataListContainer } from "../DataListContainer";
-import { DataListStateContext } from "lib/data-list";
 
-jest.mock("components/data-list/DataListPagination", () => ({
+jest.mock("components/DataListPagination", () => ({
   DataListPagination: ({ children, ...rest }: React.PropsWithChildren<{}>) => (
     <div id="DataListPagination" data-props={rest}>
       {children}
@@ -28,14 +27,27 @@ jest.mock("components/ToggleableDrawer", () => ({
   )
 }));
 
-jest.mock("components/forms/FiltersForm", () => ({
-  ...require.requireActual("components/forms/FiltersForm"),
-  FiltersForm: ({
+jest.mock("components/RecordsInfo", () => ({
+  ...require.requireActual("components/RecordsInfo"),
+  RecordsInfo: ({
     children,
     className,
     ...rest
   }: React.PropsWithChildren<{ className: string }>) => (
-    <div id="FiltersForm" className={className} data-props={rest}>
+    <div id="RecordsInfo" className={className} data-props={rest}>
+      {children}
+    </div>
+  )
+}));
+
+jest.mock("components/DeploymentForm", () => ({
+  ...require.requireActual("components/DeploymentForm"),
+  DeploymentForm: ({
+    children,
+    className,
+    ...rest
+  }: React.PropsWithChildren<{ className: string }>) => (
+    <div id="DeploymentForm" className={className} data-props={rest}>
       {children}
     </div>
   )
@@ -46,13 +58,7 @@ describe("components", () => {
     it("should render DataListContainer with records data ", () => {
       const tree = TestRenderer.create(
         withThemeProvider(
-          <DataListStateContext.Provider
-            value={{ page: 11, size: 1000, totalItems: 2345, totalPages: 3 }}
-          >
-            <DataListContainer title="test_title">
-              Some childs
-            </DataListContainer>
-          </DataListStateContext.Provider>
+          <DataListContainer title="test_title">Some childs</DataListContainer>
         )
       );
 

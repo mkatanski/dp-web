@@ -32,6 +32,19 @@ exports[`routes should render routes schema 1`] = `
       />
     </div>
     <div
+      exact={true}
+      id="ReactRouter.Route"
+      path={
+        Array [
+          "/templates",
+        ]
+      }
+    >
+      <div
+        id="TemplatesPage"
+      />
+    </div>
+    <div
       id="ReactRouter.Route"
     >
       <div
