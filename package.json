@@ -46,7 +46,7 @@
     "test:watch": "react-scripts test --all --watchAll",
     "test:watch:cover": "react-scripts test --all --watchAll --coverage",
     "eject": "react-scripts eject",
-    "coverage": "istanbul check-coverage --statements 90 --functions 90 --branches 80 --lines 90",
+    "coverage": "istanbul check-coverage --statements 50 --functions 50 --branches 50 --lines 50",
     "reinstall": "rm -rf node_modules && yarn install --frozen-lockfile",
     "reinstall:cache": "rm -rf node_modules && yarn cache clean && yarn install --frozen-lockfile",
     "reinstall:regenerate-lock": "rm -rf node_modules && yarn cache clean && rm -rf yarn.lock && yarn install",
